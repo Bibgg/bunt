@@ -1,19 +1,24 @@
 # NEON DANGER ⚡
-A neon-colored, touch-friendly 2D arcade survival game built with HTML Canvas and packaged for Android using Capacitor.
+A colorful, touch-first 2D arcade runner built with HTML Canvas and packaged for Android using Capacitor.
 
-## Play
-Open `www/index.html` in a modern browser, or install the Android debug APK from the GitHub Actions artifact.
+## Gameplay
+- Five horizontal escape positions, with safe outer edge routes.
+- Dodge blocks, spikes, lasers and overhead gates.
+- Jump, dash, shrink and slide; swipe up to jump and swipe down to slide.
+- Collect coin trails and temporary powerups: shield, coin magnet, slow time, 2x score and extra heart.
+- Three hearts per run, brief hit protection, near-miss bonus, combo score and persistent coin wallet.
+- Neon cityscape background with rotating color themes and an illustrated glowing runner.
 
 ## Controls
-- Tap the left or right half of the screen to dodge.
-- Swipe left/right, or use keyboard arrows / A-D.
-- Avoid spikes, blocks, lasers and wide hazard bars.
-- Near misses earn CLOSE CALL points; chain dodges to raise the combo.
+- Swipe left/right: change route.
+- Swipe up / tap JUMP: jump.
+- Swipe down / tap SLIDE: slide under overhead gates.
+- DASH: short invulnerable burst.
+- SHRINK: temporarily reduce hitbox.
+- Coins and powerups are collected by running through them.
 
-## Build APK + AAB
-Every push to `main` or `master` runs **Build Android APK and AAB**. It creates a Capacitor Android project, builds a debug APK and release AAB, then uploads both as a 30-day workflow artifact. Run it manually from **Actions → Build Android APK and AAB → Run workflow**.
-
-Tag a commit with `v1.0.0` (for example) to attach the APK and AAB to a GitHub Release. The release AAB is unsigned; configure Android signing before publishing to Google Play.
+## Android build
+Every push to `main` or `master` runs **Build Android APK and AAB**. It creates a clean Capacitor Android project, builds a debug APK and release AAB, and uploads artifacts. Tag a commit with `v1.0.0` to attach APK/AAB to a GitHub Release. The release AAB is unsigned; configure Android signing before publishing to Google Play.
 
 ## Stack
 HTML5 Canvas • Vanilla JavaScript • Capacitor 6 • GitHub Actions • Java 17
