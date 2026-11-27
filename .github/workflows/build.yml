@@ -20,15 +20,16 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-          cache: gradle
       - name: Install dependencies
         run: npm install
-      - name: Sync Android project
-        run: npx cap sync android
+      - name: Generate a clean Android project
+        run: |
+          rm -rf android
+          npx cap add android
+          npx cap sync android
       - name: Build APK and AAB
         working-directory: android
         run: |
-          chmod +x gradlew
           ./gradlew assembleDebug bundleRelease
       - name: Upload APK and AAB artifacts
         uses: actions/upload-artifact@v4
