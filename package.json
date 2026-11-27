@@ -1,16 +1,1 @@
-{
-  "name": "video-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "express": "^5.3.0"
-  }
-}
+{"name":"neon-danger","version":"1.0.0","private":true,"description":"Neon Danger 2D mobile arcade game","scripts":{"android:sync":"npx cap sync android"},"dependencies":{"@capacitor/android":"^6.2.0","@capacitor/core":"^6.2.0"},"devDependencies":{"@capacitor/cli":"^6.2.0"}}
